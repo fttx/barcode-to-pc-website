@@ -1,49 +1,35 @@
 $(function () {
-    var videos = {
-        a: Popcorn("#a"),
-        b: Popcorn("#b"),
-    },
-        scrub = $("#scrub"),
-        loadCount = 0,
-         events = "pause stop".split(/\s+/g);
+    var macbook = document.getElementById('macbook');
+    var iphone = document.getElementById('iphone');
+    var video = document.getElementById('video');
 
-    // iterate both media sources
-    Popcorn.forEach(videos, function (media, type) {
+    fitToContainer(macbook);
+    fitToContainer(iphone);
+    
+    var macbookCtx = macbook.getContext('2d');
+    var iphoneCtx = iphone.getContext('2d');
 
-        // when each is ready... 
-        media.on("canplayall", function () {
-
-            // trigger a custom "sync" event
-            this.emit("sync");
-
-
-            // Listen for the custom sync event...    
-        }).on("sync", function () {
-
-            // Once both items are loaded, sync events
-            if (++loadCount == 2) {
-                replay();
+    video.addEventListener('play', function() {
+        console.log("play")
+        var $this = this; //cache
+        (function loop() {
+            if (!$this.paused && !$this.ended) {
+                macbookCtx.drawImage($this, 0, 0, 739.2, 462, 0, 0, macbook.width, macbook.height);
+                iphoneCtx.drawImage($this, 740, 0, 262, 462, 0, 0, iphone.width, iphone.height);
+                setTimeout(loop, 1000 / 20); // drawing at 20fps
             }
+        })();
+    }, 0);
 
-            // If one of the video is paused/stopped
-            events.forEach(function (event) {
-                videos.a.on(event, function () {
-                    replay();
-                })
-
-                videos.b.on(event, function () {
-                    replay();
-                })
-            });
-        });
-
-        function replay() {
-            videos.a.currentTime = 0;
-            videos.b.currentTime = 0;
-            videos.a.play();
-            videos.b.play();
-        }
-
-
-    });
+    video.play();
 })
+
+
+function fitToContainer(canvas){
+    // Make it visually fill the positioned parent
+    canvas.style.width ='100%';
+    canvas.style.height='100%';
+    // ...then set the internal size to match
+    canvas.width  = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+}

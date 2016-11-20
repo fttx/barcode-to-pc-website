@@ -73,6 +73,10 @@
     </nav>
 
     <header>
+        <video height="100%" width="100%" id="video" autoplay loop>
+            <source src="video/1024-1000.m4v"></source>
+        </video>
+
         <div class="container">
             <div class="row">
                 <div class="col-sm-9 macbook-container">
@@ -81,12 +85,7 @@
                         <div class="device-mockup macbook_2015 landscape silver">
                             <div class="device">
                                 <div class="screen">
-
-
-                                    <video height="100%" width="100%" id="a" autoplay loop>
-                                        <source src="video/server-1280-840.m4v"></source>
-                                    </video>
-
+                                    <canvas id="macbook"></canvas>
                                 </div>
                                 <div class="button">
                                     <!-- You can hook the "home button" to some JavaScript events or just remove it -->
@@ -103,9 +102,7 @@
                                 <div class="screen">
                                     <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
 
-                                    <video height="100%" width="100%" id="b">
-                                        <source src="video/app-128-460.m4v"></source>
-                                    </video>
+                                    <canvas id="iphone"></canvas>
 
                                 </div>
                                 <div class="button">
