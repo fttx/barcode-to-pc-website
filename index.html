@@ -46,8 +46,7 @@
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">
-                     <img alt="logo" class="logo" src="img/logo.png">
-                    Barcode to PC
+                    <img alt="logo" class="logo" src="img/logo.png"> Barcode to PC
                 </a>
             </div>
 
@@ -82,8 +81,12 @@
                         <div class="device-mockup macbook_2015 landscape silver">
                             <div class="device">
                                 <div class="screen">
-                                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                                    <img src="img/desktop.png" class="img-responsive" alt="">
+
+
+                                    <video height="100%" width="100%" id="a" autoplay loop>
+                                        <source src="video/clean.server-1280-840.webm"></source>
+                                    </video>
+
                                 </div>
                                 <div class="button">
                                     <!-- You can hook the "home button" to some JavaScript events or just remove it -->
@@ -99,7 +102,11 @@
                             <div class="device">
                                 <div class="screen">
                                     <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                                    <img src="img/demo-screen-1.jpg" class="img-responsive" alt="">
+
+                                    <video height="100%" width="100%" id="b">
+                                        <source src="video/clean.app-32-460.webm"></source>
+                                    </video>
+
                                 </div>
                                 <div class="button">
                                     <!-- You can hook the "home button" to some JavaScript events or just remove it -->
@@ -183,13 +190,13 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="feature-item">
-                                    <i class="fa fa-wifi" aria-hidden="true"></i>                                   
+                                    <i class="fa fa-wifi" aria-hidden="true"></i>
                                     <h3>Wi-Fi ready</h3>
                                     <p class="text-muted">You only need to connect your smartphone to the same network of computer</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="row"> 
+                        <div class="row">
                             <div class="col-md-6">
                                 <div class="feature-item">
                                     <i class="fa fa-file-excel-o" aria-hidden="true"></i>
@@ -286,6 +293,11 @@
     <!-- Theme JavaScript -->
     <script src="js/new-age.min.js"></script>
 
+    <!-- Popcornjs -->
+    <script src="vendor/popcorn/popcorn.min.js"></script>
+
+    <!-- Main JavaScript -->
+    <script src="js/main.min.js"></script>
 </body>
 
 </html>
