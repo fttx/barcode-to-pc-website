@@ -71,6 +71,11 @@ header * {
 .navbar-toggle {
   margin-top: 21px;
 }
+.feature-item i {
+  background: none !important;
+  color: black !important;
+  -webkit-text-fill-color: #000  !important;
+}
 .heading-font {
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
@@ -221,9 +226,9 @@ header {
   overflow-y: hidden;
   background: url("../img/bg-pattern.png"), #fff;
   /* fallback for old browsers */
-  background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, #fff, #fff);
+  background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, #fff, #d2d2d2);
   /* Chrome 10-25, Safari 5.1-6 */
-  background: url("../img/bg-pattern.png"), linear-gradient(to left, #fff, #fff);
+  background: url("../img/bg-pattern.png"), linear-gradient(to left, #fff, #d2d2d2);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: white;
 }
@@ -352,8 +357,8 @@ section.features .feature-item h3 {
 }
 section.features .feature-item i {
   font-size: 80px;
-  background: -webkit-linear-gradient(to left, #fff, #fff);
-  background: linear-gradient(to left, #fff, #fff);
+  background: -webkit-linear-gradient(to left, #fff, #d2d2d2);
+  background: linear-gradient(to left, #fff, #d2d2d2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
