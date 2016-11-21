@@ -18,7 +18,7 @@
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 992px)  {
     .download-button {
         width: 100%;
         margin: 50px 0;
@@ -29,9 +29,23 @@
 @media (max-height: 826px) and (min-width: 992px) {
     .header-download{
         width: 60%;
+        margin: 50px 0;        
+    }
+
+    .download-button {
+        margin: 25px 0;
     }
 }
 
+@media (max-height: 768px) {
+    .header-content {
+        height: auto !important;
+    }
+}
+
+.device-container {
+    max-height: none !important;
+}
 
 .nav.navbar-nav.navbar-right li a, .navbar-brand  {
     color: black !important;
