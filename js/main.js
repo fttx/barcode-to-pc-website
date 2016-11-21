@@ -10,7 +10,6 @@ $(function () {
     var iphoneCtx = iphone.getContext('2d');
 
     video.addEventListener('play', function() {
-        console.log("play")
         var $this = this; //cache
         (function loop() {
             if (!$this.paused && !$this.ended) {
