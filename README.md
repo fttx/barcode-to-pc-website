@@ -7,5 +7,6 @@ npm install gulp -D
 # Build
 ```
 npm install
+gulp dev
 gulp
 ```

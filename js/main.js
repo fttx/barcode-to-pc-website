@@ -5,11 +5,11 @@ $(function () {
 
     fitToContainer(macbook);
     fitToContainer(iphone);
-    
+
     var macbookCtx = macbook.getContext('2d');
     var iphoneCtx = iphone.getContext('2d');
 
-    video.addEventListener('play', function() {
+    video.addEventListener('play', function () {
         var $this = this; //cache
         (function loop() {
             if (!$this.paused && !$this.ended) {
@@ -21,14 +21,21 @@ $(function () {
     }, 0);
 
     video.play();
+
+
+    $('#win').click(function (e) {
+        e.preventDefault();
+        $('#win-32, #win-64').removeClass('hidden');
+        $(this).addClass('hidden');
+    });
 })
 
 
-function fitToContainer(canvas){
+function fitToContainer(canvas) {
     // Make it visually fill the positioned parent
-    canvas.style.width ='100%';
-    canvas.style.height='100%';
+    canvas.style.width = '100%';
+    canvas.style.height = '100%';
     // ...then set the internal size to match
-    canvas.width  = canvas.offsetWidth;
+    canvas.width = canvas.offsetWidth;
     canvas.height = canvas.offsetHeight;
 }
