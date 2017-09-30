@@ -1,0 +1,151 @@
+@@include('./include/top.html')
+<section class="container faq-title">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h1>Frequently asked questions</h1>
+        </div>
+    </div>
+</section>
+
+<section class="faq-section container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Common issues</h2>
+
+            <div class="col-md-offset-1">
+                <h3><i class="fa fa-angle-right" aria-hidden="true"></i> How do i put the scans inside my spreadsheet (or other
+                    software)?
+                </h3>
+                <p>
+                    <ol>
+                        <li>Download <a href="/#download-server">Barcode to PC server</a></li>
+                        <li>Install and start the server in your computer</li>
+                        <li>Install <a href="/#download-app">the app</a> in your smartphone and open it</li>
+                        <li>Now the app should connect automatically to the server, if nothing is happening follow the instrucitons
+                            on screen</li>
+                        <li>Once the app is connected open your spreadsheet or whatever software you need to scan in, and position
+                            the cursor where you want to scan</li>
+                        <li>Scan your barcodes by tapping the camera icon in the app</li>
+                        <li>Thanks to the <i>keyboard emulation</i>, the barcode will be typed in the cursor position</li>
+                    </ol>
+                </p>
+            </div>
+
+            <div class="col-md-offset-1">
+                <h3><i class="fa fa-angle-right" aria-hidden="true"></i> Can i use it whitout a Wi-Fi connection?
+                </h3>
+                <p>
+                    If you don't have access to a Wi-Fi network, you can always use your smartphone hotspot, by following this steps:
+                    <ol>
+                        <li>Enable the Wi-Fi hostspot on your smartphone <a href="https://support.apple.com/en-us/HT204023">See how here</a></li>
+                        <li>Connect your computer to the Wi-Fi hotspot</li>
+                        <li><a href="#add-server-manually">Add the server manually</a> using the QR Code</li>
+                    </ol>
+                </p>
+                <br> Note that Barcode to PC server doesn't require an internet connection, as matter of fact that it uses
+                the LAN to communicate, thus, in most of the cases it is required only the Wi-Fi network.
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="faq-section container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Connection issues</h2>
+
+            <div class="col-md-offset-1">
+                <h3><i class="fa fa-angle-right" aria-hidden="true"></i> The app doesn't find the computer</h3>
+                <p>Make you sure that:
+                    <ol>
+                        <li>Your computer and your smartphone are connected to the same network.<br>It doesn't matter if your
+                            computer has a wired connection as long as it is plugged into the same access point where your
+                            smartphone is connected.</li>
+                        <li>Both app and server are updated to the latest version.</li>
+                        <li>Barcode to PC server is in your firewall and/or antivirus exceptions</li>
+                        <li>Your computer is discoverable (only Windows users). See <a href="tutorial-how-to-set-windows-discoverable.html">How to set Windows discoverable</a></li>
+                    </ol>
+                </p>
+            </div>
+
+            <div id="configure-firewall" class="col-md-offset-1">
+                <h3><i class="fa fa-angle-right" aria-hidden="true"></i> How do i configure my firewall?</h3>
+                <p> You must add the Barcode to PC server executable to the firewall exceptions, and allow the connections for
+                    the port 57891 TCP and 5353 UDP.<br> If you don't know how to do it, see the tutorial for your OS:
+                    <ul>
+                        <li><a href="/tutorial-configure-windows-firewall.html">Windows</a></li>
+                        <li><a href="/tutorial-configure-macos-firewall.html">macOS</a></li>
+                        <li><a href="/tutorial-configure-linux-firewall.html">Linux</a></li>
+                    </ul>
+                </p>
+
+                <!-- DENTRO WINDOWS questo -->
+                <!-- Note that nowadays the majority of antivirus include also a built-in firewall, thus you must add Barcode to PC server to
+                its exceptions list aswell. -->
+            </div>
+
+            <div id="add-server-manually" class="col-md-offset-1">
+                <h3><i class="fa fa-angle-right" aria-hidden="true"></i> Add the server manually</h3>
+                <p>
+                    There are two ways to add the server manually.<br> The first is by using the QR Code:
+                    <ol>
+                        <li>Open the server</li>
+                        <li>Click Info, and the connect QR Code should appear</li>
+                        <li>Open the app</li>
+                        <li>Open the menu and select the "Select server" page</li>
+                        <li>Tap the scan icon [ ] and scan the QR Code</li>
+                    </ol>
+                    <br> The second one:
+                    <ol>
+                        <li>Open the server</li>
+                        <li>Open the menu and select the "Select server" page</li>
+                        <li>Tap the add icon + and type the IP address of the server</li>
+                    </ol>
+
+
+                    <!-- <li>Or if it doesn't work add the server manually by inserting </li>
+                        <li>
+                            If you're on Windows
+                            <ol>
+                                
+                                <li>Press the Windows key (or open the Start menu)</li>
+                                <li>Type <code>cmd</code></li>
+                                <li>Press enter</li>
+                                <li>Type ipconfig</li>
+                                <li>Search for <code>Default Gateway</code></li>
+                            </ol>
+                        </li>
+                        <li>Run the command <code>ifconfig if you're </code></li> -->
+                </p>
+            </div>
+
+            <div class="col-md-offset-1">
+                <h3><i class="fa fa-angle-right" aria-hidden="true"></i> The app shows the "Connection problem" error</h3>
+                <p> The most common cause of this issue is that the firewall and/or antivirus is blocking the communication between
+                    the app and the server. See <a href="#configure-firewall">How do i configure my firewall?</a>
+                </p>
+            </div>
+
+            <div class="col-md-offset-1">
+                <h3><i class="fa fa-angle-right" aria-hidden="true"></i> Which port does the server use?</h3>
+                Barcode to PC server runs a WebSocket server on the 57891 TCP port.<br> In addition to that, Barcode to PC
+                server announces its service through the 5353 UDP port.<br><br> The latter is not essential, but it allows
+                the app to discover the server without the user action. If you don't allow connections through the 5353 UDP,
+                you can still use the server and the app, but you will need to <a href="#add-server-manually">add the server manually</a>
+            </div>
+
+            <div class="col-md-offset-1">
+                <h3><i class="fa fa-angle-right" aria-hidden="true"></i> The server shows the "Apple Bonjour is missing" error</h3>
+                This means that the installer has failed to install the <a href="https://support.apple.com/it-it/bonjour">Apple Bonjour package</a>                and this implies that the app may fail to detect the server automatically, and in order to connect the app
+                you may need to <a href="#add-server-manually">add the server manually</a>.<br> To remove this alert and
+                take advance of the zeroconf feature, try to install Barcode to PC server again with an administrator account
+                and then reboot your system.
+            </div>
+
+
+        </div>
+    </div>
+</section>
+@@include('./include/bottom.html')

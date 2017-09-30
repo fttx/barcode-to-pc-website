@@ -6,6 +6,7 @@ var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
+var fileinclude = require('gulp-file-include');
 
 // Set the banner content
 var banner = ['/*!\n',
@@ -17,7 +18,7 @@ var banner = ['/*!\n',
 ].join('');
 
 // Compile LESS files from /less into /css
-gulp.task('less', function() {
+gulp.task('less', function () {
     return gulp.src('less/new-age.less')
         .pipe(less())
         .pipe(header(banner, { pkg: pkg }))
@@ -28,7 +29,7 @@ gulp.task('less', function() {
 });
 
 // Minify compiled CSS
-gulp.task('minify-css', ['less'], function() {
+gulp.task('minify-css', ['less'], function () {
     return gulp.src('css/new-age.css')
         .pipe(cleanCSS({ compatibility: 'ie8' }))
         .pipe(rename({ suffix: '.min' }))
@@ -39,7 +40,7 @@ gulp.task('minify-css', ['less'], function() {
 });
 
 // Minify JS
-gulp.task('minify-js', function() {
+gulp.task('minify-js', function () {
     return gulp.src(['js/new-age.js', 'js/main.js'])
         .pipe(uglify())
         .pipe(header(banner, { pkg: pkg }))
@@ -51,7 +52,7 @@ gulp.task('minify-js', function() {
 });
 
 // Copy vendor libraries from /node_modules into /vendor
-gulp.task('copy', function() {
+gulp.task('copy', function () {
     gulp.src(['node_modules/bootstrap/dist/**/*', '!**/npm.js', '!**/bootstrap-theme.*', '!**/*.map'])
         .pipe(gulp.dest('vendor/bootstrap'))
 
@@ -63,13 +64,13 @@ gulp.task('copy', function() {
 
 
     gulp.src([
-            'node_modules/font-awesome/**',
-            '!node_modules/font-awesome/**/*.map',
-            '!node_modules/font-awesome/.npmignore',
-            '!node_modules/font-awesome/*.txt',
-            '!node_modules/font-awesome/*.md',
-            '!node_modules/font-awesome/*.json'
-        ])
+        'node_modules/font-awesome/**',
+        '!node_modules/font-awesome/**/*.map',
+        '!node_modules/font-awesome/.npmignore',
+        '!node_modules/font-awesome/*.txt',
+        '!node_modules/font-awesome/*.md',
+        '!node_modules/font-awesome/*.json'
+    ])
         .pipe(gulp.dest('vendor/font-awesome'))
 })
 
@@ -77,7 +78,7 @@ gulp.task('copy', function() {
 gulp.task('default', ['less', 'minify-css', 'minify-js', 'copy']);
 
 // Configure the browserSync task
-gulp.task('browserSync', function() {
+gulp.task('browserSync', function () {
     browserSync.init({
         server: {
             baseDir: ''
@@ -85,12 +86,25 @@ gulp.task('browserSync', function() {
     })
 })
 
+gulp.task('fileinclude', function () {
+    gulp.src(['html/*.html'])
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: '@file'
+        }))
+        .pipe(gulp.dest('./'));
+});
+
+gulp.task('reload', () => {
+    browserSync.reload();
+})
+
 // Dev task with browserSync
-gulp.task('dev', ['browserSync', 'less', 'minify-css', 'minify-js'], function() {
+gulp.task('dev', ['fileinclude', 'browserSync', 'less', 'minify-css', 'minify-js'], function () {
     gulp.watch('less/*.less', ['less']);
     gulp.watch('css/*.css', ['minify-css']);
     gulp.watch('js/*.js', ['minify-js']);
     // Reloads the browser whenever HTML or JS files change
-    gulp.watch('*.html', browserSync.reload);
+    gulp.watch('html/**/*.html', ['fileinclude', 'reload']);    
     gulp.watch('js/**/*.js', browserSync.reload);
 });

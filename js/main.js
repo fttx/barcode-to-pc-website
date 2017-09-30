@@ -1,7 +1,32 @@
 $(function () {
+    setupVideo();
+
+    $('#win').click(function (e) {
+        e.preventDefault();
+        $('#win-32, #win-64').removeClass('hidden');
+        $(this).addClass('hidden');
+    });
+
+
+    $('a[href^="#"]').click(function (event) {
+        event.preventDefault();
+        $(window).scrollTop($($(this).attr('href')).offset().top - 76);
+    });
+
+    if (window.location.hash.length !== 0) {
+        setTimeout(function () {
+            $(window).scrollTop($(location.hash).offset().top - 76);
+        }, 0)
+    }
+})
+
+
+function setupVideo() {
     var macbook = document.getElementById('macbook');
     var iphone = document.getElementById('iphone');
     var video = document.getElementById('video');
+
+    if (!macbook) { return }
 
     fitToContainer(macbook);
     fitToContainer(iphone);
@@ -21,15 +46,7 @@ $(function () {
     }, 0);
 
     video.play();
-
-
-    $('#win').click(function (e) {
-        e.preventDefault();
-        $('#win-32, #win-64').removeClass('hidden');
-        $(this).addClass('hidden');
-    });
-})
-
+}
 
 function fitToContainer(canvas) {
     // Make it visually fill the positioned parent

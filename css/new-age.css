@@ -119,6 +119,30 @@ h1 {
 section.download h2 {
   font-size: 50px !important;
 }
+section.faq-title {
+  padding-bottom: 20px;
+  padding-top: 80px;
+}
+section.faq-section {
+  padding-bottom: 60px;
+  padding-top: 0px;
+}
+section.faq-section h2 {
+  font-size: 25px;
+  font-weight: 500;
+}
+section.faq-section p {
+  font-size: 15px;
+}
+footer {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+footer a {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+footer a:hover {
+  color: #fff !important;
+}
 .heading-font {
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
