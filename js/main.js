@@ -1,6 +1,36 @@
 $(function () {
     setupVideo();
 
+    if (ga) {
+        $('#download-server a, #download-app a').click(function () {
+            switch ($(this).attr('id')) {
+                case 'win-32':
+                    ga('send', 'event', 'Downloads', 'download', 'Windows x32', 'win32');
+                    ga('send', 'event', 'Apple', 'Download Bonjour', 'bonjour', 'bonjour');
+                    break;
+                case 'win-64':
+                    ga('send', 'event', 'Downloads', 'download', 'Windows x64', 'win64');
+                    ga('send', 'event', 'Apple', 'Download Bonjour', 'bonjour', 'bonjour');
+                    break;
+
+                case 'macos':
+                    ga('send', 'event', 'Downloads', 'download', 'macOS', 'macos');
+                    break;
+
+                case 'linux':
+                    ga('send', 'event', 'Downloads', 'download', 'Linux', 'linux');
+                    break;
+
+                case 'ios':
+                    ga('send', 'event', 'Downloads', 'download', 'iOS', 'ios');
+                    break;
+                case 'android':
+                    ga('send', 'event', 'Downloads', 'download', 'Android', 'android');
+                    break;
+            }
+        });
+    }
+
     $('#win').click(function (e) {
         e.preventDefault();
         $('#win-32, #win-64').removeClass('hidden');
