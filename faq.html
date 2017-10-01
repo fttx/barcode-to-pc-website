@@ -16,7 +16,7 @@
     <meta property="og:description" content="Barcode to PC turns your smartphone into a real barcode scanner by sending realtime strokes to your PC. Download now the iOS or Android app"
     />
 
-    <title>Barcode to PC: Wi-Fi scanner app</title>
+    <title>FAQ - Barcode to PC</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -79,113 +79,117 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-<section class="container faq-title">
-    <div class="row">
-        <div class="col-lg-12 text-center">
-            <h1>Frequently asked questions</h1>
-        </div>
+<section class="container section-title">
+    <div class="text-center">
+        <h1>Frequently asked questions</h1>
     </div>
 </section>
 
-<section class="faq-section container">
-    <div class="row">
-        <div class="col-lg-12">
-            <h2>Common issues</h2>
+<section class="section-container container">
 
-            <div class="col-md-offset-1">
-                <h3><i class="fa fa-angle-right" aria-hidden="true"></i> How do i put the scans inside my spreadsheet (or other
-                    software)?
-                </h3>
-                <p>
-                    <ol>
-                        <li>Download <a href="/#download-server">Barcode to PC server</a></li>
-                        <li>Install and start the server in your computer</li>
-                        <li>Install <a href="/#download-app">the app</a> in your smartphone and open it</li>
-                        <li>Now the app should connect automatically to the server, if nothing is happening follow the instrucitons
-                            on screen</li>
-                        <li>Once the app is connected open your spreadsheet or whatever software you need to scan in, and position
-                            the cursor where you want to scan</li>
-                        <li>Scan your barcodes by tapping the camera icon in the app</li>
-                        <li>Thanks to the <i>keyboard emulation</i>, the barcode will be typed in the cursor position</li>
-                    </ol>
-                </p>
-            </div>
+    <h2>Most common</h2>
 
-            <div class="col-md-offset-1">
-                <h3><i class="fa fa-angle-right" aria-hidden="true"></i> Can i use it whitout a Wi-Fi connection?
-                </h3>
-                <p>
-                    If you don't have access to a Wi-Fi network, you can always use your smartphone hotspot, by following this steps:
-                    <ol>
-                        <li>Enable the Wi-Fi hostspot on your smartphone <a href="https://support.apple.com/en-us/HT204023">See how here</a></li>
-                        <li>Connect your computer to the Wi-Fi hotspot</li>
-                        <li><a href="#add-server-manually">Add the server manually</a> using the QR Code</li>
-                    </ol>
-                </p>
-                <br> Note that Barcode to PC server doesn't require an internet connection, as matter of fact that it uses
-                the LAN to communicate, thus, in most of the cases it is required only the Wi-Fi network.
-            </div>
-
-        </div>
+    <div id="scan-to-spreadsheet" class="col-md-offset-1">
+        <h3><i class="fa fa-angle-right" aria-hidden="true"></i> How do i put the scans on my spreadsheet (or other software)?
+        </h3>
+        <p>
+            <ol>
+                <li>Download <a href="/#download-server">Barcode to PC server</a></li>
+                <li>Install and start the server on your computer</li>
+                <li>Install <a href="/#download-app">the app</a> on your smartphone and open it</li>
+                <li>Now the app should connect automatically to the server, if nothing happens follow the instructions on screen</li>
+                <li>Once the app is connected open your spreadsheet or whatever software in which you want to scan in, and position
+                    the cursor wherever you want to scan</li>
+                <li>Scan your barcodes by tapping the camera icon in the app</li>
+                <li>Thanks to the <i>keyboard emulation</i>, the barcode will be typed in the cursor position</li>
+            </ol>
+        </p>
     </div>
+
+    <div id="use-without-wifi" class="col-md-offset-1">
+        <h3><i class="fa fa-angle-right" aria-hidden="true"></i> Can i use it without a Wi-Fi connection?
+        </h3>
+        <p>
+            If you don't have access to a Wi-Fi network, you can always use your smartphone as a Wi-Fi hotspot, by following this steps:
+            <ol>
+                <li>Enable the Wi-Fi hotspot on your smartphone <a href="https://support.apple.com/en-us/HT204023">See how here</a></li>
+                <li>Connect your computer to the Wi-Fi hotspot</li>
+                <li><a href="#add-server-manually">Add the server manually</a> using the QR Code</li>
+            </ol>
+        </p>
+        <br> Note that Barcode to PC server doesn't require an internet connection, as matter of fact that it uses the LAN
+        to communicate, thus, in most of the cases it is required only the Wi-Fi network.
+    </div>
+
+
+
+    <div id="supported-barcode-types" class="col-md-offset-1">
+        <h3><i class="fa fa-angle-right" aria-hidden="true"></i> What are the supported barcode types?
+        </h3>
+        <p>
+            See the <a href="https://github.com/phonegap/phonegap-plugin-barcodescanner#using-the-plugin">supported barcode types table</a>
+        </p>
+    </div>
+
 </section>
 
 
-<section class="faq-section container">
-    <div class="row">
-        <div class="col-lg-12">
-            <h2>Connection issues</h2>
+<section class="section-container container">
 
-            <div class="col-md-offset-1">
-                <h3><i class="fa fa-angle-right" aria-hidden="true"></i> The app doesn't find the computer</h3>
-                <p>Make you sure that:
-                    <ol>
-                        <li>Your computer and your smartphone are connected to the same network.<br>It doesn't matter if your
-                            computer has a wired connection as long as it is plugged into the same access point where your
-                            smartphone is connected.</li>
-                        <li>Both app and server are updated to the latest version.</li>
-                        <li>Barcode to PC server is in your firewall and/or antivirus exceptions</li>
-                        <li>Your computer is discoverable (only Windows users). See <a href="tutorial-how-to-set-windows-discoverable.html">How to set Windows discoverable</a></li>
-                    </ol>
-                </p>
-            </div>
+    <h2>Connection</h2>
 
-            <div id="configure-firewall" class="col-md-offset-1">
-                <h3><i class="fa fa-angle-right" aria-hidden="true"></i> How do i configure my firewall?</h3>
-                <p> You must add the Barcode to PC server executable to the firewall exceptions, and allow the connections for
-                    the port 57891 TCP and 5353 UDP.<br> If you don't know how to do it, see the tutorial for your OS:
-                    <ul>
-                        <li><a href="/tutorial-configure-windows-firewall.html">Windows</a></li>
-                        <li><a href="/tutorial-configure-macos-firewall.html">macOS</a></li>
-                        <li><a href="/tutorial-configure-linux-firewall.html">Linux</a></li>
-                    </ul>
-                </p>
+    <div id="app-doesnt-find-computer" class="col-md-offset-1">
+        <h3><i class="fa fa-angle-right" aria-hidden="true"></i> The app doesn't find the computer</h3>
+        <p>Make you sure that:
+            <ol>
+                <li>Your computer and your smartphone are connected to the same network.<br>It doesn't matter if your computer
+                    has a wired connection as long as it is plugged into the same access point where your smartphone is connected.</li>
+                <li>Both app and server are updated to the latest version.</li>
+                <li>Barcode to PC server is in your firewall and/or antivirus exceptions list</li>
+                <li>Your computer is discoverable (only Windows users). See <a href="/tutorial-how-to-set-windows-discoverable.html">How to make Windows discoverable</a></li>
+            </ol>
+        </p>
+    </div>
 
-                <!-- DENTRO WINDOWS questo -->
-                <!-- Note that nowadays the majority of antivirus include also a built-in firewall, thus you must add Barcode to PC server to
+    <div id="configure-firewall" class="col-md-offset-1">
+        <h3><i class="fa fa-angle-right" aria-hidden="true"></i> How do i configure the firewall?</h3>
+        <p> You must add the Barcode to PC server executable to the firewall exceptions, and allow the connections for the port
+            57891 TCP and 5353 UDP.<br> If you don't know how to do it, see the tutorial for your OS:
+            <ul>
+                <li><a href="/tutorial-configure-windows-firewall.html">Windows</a></li>
+                <li><a href="/tutorial-configure-macos-firewall.html">macOS</a></li>
+                <li><a href="/tutorial-configure-linux-firewall.html">Linux</a></li>
+            </ul>
+        </p>
+
+        <!-- DENTRO WINDOWS questo -->
+        <!-- Note that nowadays the majority of antivirus include also a built-in firewall, thus you must add Barcode to PC server to
                 its exceptions list aswell. -->
-            </div>
 
-            <div id="add-server-manually" class="col-md-offset-1">
-                <h3><i class="fa fa-angle-right" aria-hidden="true"></i> Add the server manually</h3>
-                <p>
-                    There are two ways to add the server manually.<br> The first is by using the QR Code:
-                    <ol>
-                        <li>Open the server</li>
-                        <li>Click Info, and the connect QR Code should appear</li>
-                        <li>Open the app</li>
-                        <li>Open the menu and select the "Select server" page</li>
-                        <li>Tap the scan icon [ ] and scan the QR Code</li>
-                    </ol>
-                    <br> The second one:
-                    <ol>
-                        <li>Open the server</li>
-                        <li>Open the menu and select the "Select server" page</li>
-                        <li>Tap the add icon + and type the IP address of the server</li>
-                    </ol>
+        <!-- linux -->
+        <!-- https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-16-04 -->
+    </div>
+
+    <div id="add-server-manually" class="col-md-offset-1">
+        <h3><i class="fa fa-angle-right" aria-hidden="true"></i> Add the server manually</h3>
+        <p>
+            There are two ways to add the server manually.<br> The first is by using the QR Code:
+            <ol>
+                <li>Open the server</li>
+                <li>Click Info, and the connect QR Code should appear</li>
+                <li>Open the app</li>
+                <li>Open the menu and tap "Select server"</li>
+                <li>Tap the scan icon [&nbsp;&nbsp;] and scan the QR Code displayed on your computer</li>
+            </ol>
+            <br> The second one:
+            <ol>
+                <li>Open the server</li>
+                <li>Open the menu and tap "Select server"</li>
+                <li>Tap the add icon + and type the IP address of the server</li>
+            </ol>
 
 
-                    <!-- <li>Or if it doesn't work add the server manually by inserting </li>
+            <!-- <li>Or if it doesn't work add the server manually by inserting </li>
                         <li>
                             If you're on Windows
                             <ol>
@@ -198,68 +202,93 @@
                             </ol>
                         </li>
                         <li>Run the command <code>ifconfig if you're </code></li> -->
-                </p>
-            </div>
+        </p>
+    </div>
 
-            <div class="col-md-offset-1">
-                <h3><i class="fa fa-angle-right" aria-hidden="true"></i> The app shows the "Connection problem" error</h3>
-                <p> The most common cause of this issue is that the firewall and/or antivirus is blocking the communication between
-                    the app and the server. See <a href="#configure-firewall">How do i configure my firewall?</a>
-                </p>
-            </div>
+    <div id="connection-problem-error" class="col-md-offset-1">
+        <h3><i class="fa fa-angle-right" aria-hidden="true"></i> The app shows the "Connection problem" error</h3>
+        <p> The most common cause of this issue is that the firewall and/or antivirus is blocking the communication between the
+            app and the server. See <a href="#configure-firewall">How do i configure my firewall?</a>
+        </p>
+    </div>
 
-            <div class="col-md-offset-1">
-                <h3><i class="fa fa-angle-right" aria-hidden="true"></i> Which port does the server use?</h3>
-                Barcode to PC server runs a WebSocket server on the 57891 TCP port.<br> In addition to that, Barcode to PC
-                server announces its service through the 5353 UDP port.<br><br> The latter is not essential, but it allows
-                the app to discover the server without the user action. If you don't allow connections through the 5353 UDP,
-                you can still use the server and the app, but you will need to <a href="#add-server-manually">add the server manually</a>
-            </div>
+    <div id="server-port" class="col-md-offset-1">
+        <h3><i class="fa fa-angle-right" aria-hidden="true"></i> Which port does the server use?</h3>
+        Barcode to PC server runs a WebSocket server on the 57891 TCP port.<br> In addition to that, Barcode to PC server
+        announces its service through the 5353 UDP port.<br><br> The latter is not essential, but it allows the app to discover
+        the server without the user action. If you don't accept connections on the 5353 UDP port, you can still use the server
+        and the app, but you will need to <a href="#add-server-manually">add the server manually</a>
+    </div>
 
-            <div class="col-md-offset-1">
-                <h3><i class="fa fa-angle-right" aria-hidden="true"></i> The server shows the "Apple Bonjour is missing" error</h3>
-                This means that the installer has failed to install the <a href="https://support.apple.com/it-it/bonjour">Apple Bonjour package</a>                and this implies that the app may fail to detect the server automatically, and in order to connect the app
-                you may need to <a href="#add-server-manually">add the server manually</a>.<br> To remove this alert and
-                take advance of the zeroconf feature, try to install Barcode to PC server again with an administrator account
-                and then reboot your system.
-            </div>
-
-
-        </div>
+    <div id="apple-bonjour" class="col-md-offset-1">
+        <h3><i class="fa fa-angle-right" aria-hidden="true"></i> The server shows the "Apple Bonjour is missing" error</h3>
+        This means that the installer has failed to install the <a href="https://support.apple.com/it-it/bonjour">Apple Bonjour package</a>        and this implies that the app may fail to detect the server automatically, and in order to connect the app you may
+        need to <a href="#add-server-manually">add the server manually</a>.<br> To remove this alert and take advantage of
+        the zeroconf feature, try to install Barcode to PC server again with an administrator account and then reboot your
+        system.
     </div>
 </section>
+
+
+<section class="section-container container">
+    <h2>Other issues</h2>
+    <div id="app-doesnt-find-computer" class="col-md-offset-1">
+        <p>
+            If you have other issues feel free to contact me at:
+            <a href="mailto:&#x66;&#x69;&#x6c;&#x69;&#x70;&#x70;&#x6f;&#x2e;&#x74;&#x6f;&#x72;&#x74;&#x6f;&#x6d;&#x61;&#x73;&#x69;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;">&#x66;&#x69;&#x6c;&#x69;&#x70;&#x70;&#x6f;&#x2e;&#x74;&#x6f;&#x72;&#x74;&#x6f;&#x6d;&#x61;&#x73;&#x69;&#x40;&#x67;&#x6d;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;</a>
+        </p>
+        <p>If you want to report a bug or want to submit a feature request open an issue on GitHub:</p>
+        <ul>
+            <li>App: <a href="https://github.com/fttx/barcode-to-pc-app/issues">barcode-to-pc-app/issues</a></li>
+            <li>Server: <a href="https://github.com/fttx/barcode-to-pc-server/issues">barcode-to-pc-server/issues</a></li>
+        </ul>
+    </div>
+</section>
+
+
+<section class="section-container container">
+    <h2>Links</h2>
+    <ul>
+        <li><a href="/tutorial-configure-windows-firewall.html">How to configure Windows Firewall tutorial</a></li>
+        <li><a href="/tutorial-configure-macos-firewall.html">How to configure macOS Firewall tutorial</a></li>
+        <li><a href="/tutorial-configure-linux-firewall.html">How to configure Linux Firewall tutorial</a></li>
+        <li><a href="/tutorial-how-to-set-windows-discoverable.html">How to make Windows discoverable tutorial</a></li>
+        <li><a href="/#download-server">Download Barcode to PC server</a></li>
+        <li><a href="/#download-app">Download Barcode to PC app</a></li>
+    </ul>
+</section>
 <footer>
-        <div class="container">
-            <p>&copy; 2016-2017 Barcode to PC. All Rights Reserved.</p>
-            <ul class="list-inline">
-                <li>
-                    <a href="privacy.html">Privacy</a>
-                </li>
-                <li>
-                    <a href="faq.html">FAQ</a>
-                </li>
-                <!-- <li>
+    <div class="container">
+        <p>Copyright &copy; 2017 Barcode to PC. Filippo Tortomasi. All rights reserved.</p>
+        <ul class="list-inline">
+            <li>
+                <a href="privacy.html">Privacy</a>
+            </li>
+            <li>
+                <a href="faq.html">FAQ</a>
+            </li>
+            <!-- <li>
                     <a href="#">FAQ</a>
                 </li>-->
-            </ul>
-        </div>
-    </footer>
-    
-    <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+        </ul>
+    </div>
+</footer>
 
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<!-- jQuery -->
+<script src="vendor/jquery/jquery.min.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!-- Plugin JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
 
-    <!-- Theme JavaScript -->
-    <script src="js/new-age.min.js"></script>
+<!-- Theme JavaScript -->
+<script src="js/new-age.min.js"></script>
 
-    <!-- Main JavaScript -->
-    <script src="js/main.min.js"></script>
+<!-- Main JavaScript -->
+<script src="js/main.min.js"></script>
 </body>
 
 </html>
