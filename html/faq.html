@@ -144,8 +144,17 @@
         <h3><i class="fa fa-angle-right" aria-hidden="true"></i> The server shows the "Apple Bonjour is missing" error</h3>
         This means that the installer has failed to install the <a href="https://support.apple.com/it-it/bonjour">Apple Bonjour package</a>        and this implies that the app may fail to detect the server automatically, and in order to connect the app you may
         need to <a href="#add-server-manually">add the server manually</a>.<br> To remove this alert and take advantage of
-        the zeroconf feature, try to install Barcode to PC server again with an administrator account and then reboot your
-        system.
+        the zeroconf feature:
+        <ul>
+            <li>
+                If you're on Windows try to install Barcode to PC server again with an administrator account and then reboot your system.
+            </li>
+            <li>
+                If you're on Linux install <code>avahi</code>.
+                To learn more see <a href="https://wiki.debian.org/ZeroConf">ZeroConf - Debian Wiki</a>.
+            </li>
+        </ul>
+
     </div>
 </section>
 
