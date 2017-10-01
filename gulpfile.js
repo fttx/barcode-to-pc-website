@@ -75,7 +75,7 @@ gulp.task('copy', function () {
 })
 
 // Run everything
-gulp.task('default', ['less', 'minify-css', 'minify-js', 'copy']);
+gulp.task('default', ['fileinclude', 'less', 'minify-css', 'minify-js', 'copy']);
 
 // Configure the browserSync task
 gulp.task('browserSync', function () {
@@ -105,6 +105,6 @@ gulp.task('dev', ['fileinclude', 'browserSync', 'less', 'minify-css', 'minify-js
     gulp.watch('css/*.css', ['minify-css']);
     gulp.watch('js/*.js', ['minify-js']);
     // Reloads the browser whenever HTML or JS files change
-    gulp.watch('html/**/*.html', ['fileinclude', 'reload']);    
+    gulp.watch('html/**/*.html', ['fileinclude', 'reload']);
     gulp.watch('js/**/*.js', browserSync.reload);
 });
