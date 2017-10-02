@@ -1,45 +1,40 @@
-@@include('./include/top.html', {
-    "title": "Barcode to PC: Wi-Fi scanner app"
-})
+@@include('./include/top.html', { "title": "Barcode to PC: Wi-Fi scanner app" })
 <header>
     <video height="100%" width="100%" id="video" loop muted>
         <source src="video/1024kbps-20fps-1000px.m4v"></source>
     </video>
 
     <div class="container">
-        <div class="row">
+        <div class="row video-section">
             <div class="col-sm-9 macbook-container">
 
-                <div class="device-container">
-                    <div class="device-mockup macbook_2015 landscape silver">
-                        <div class="device">
-                            <div class="screen">
-                                <canvas id="macbook"></canvas>
-                            </div>
-                            <div class="button">
-                                <!-- You can hook the "home button" to some JavaScript events or just remove it -->
-                            </div>
+                <div class="device-wrapper">
+                    <div class="device" data-device="Macbook" data-orientation="portrait" data-color="white">
+                        <div class="screen">
+                            <!-- PUT CONTENTS HERE -->
+                            <canvas id="macbook"></canvas>
+                        </div>
+                        <div class="button">
+                            <!-- You can hook the "home button" to some JavaScript events or just remove it -->
                         </div>
                     </div>
                 </div>
-
             </div>
             <div class="col-sm-3 iphone-container">
-                <div class="device-container">
-                    <div class="device-mockup iphone6_plus portrait black">
-                        <div class="device">
-                            <div class="screen">
-                                <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
 
-                                <canvas id="iphone"></canvas>
+                <div class="device-wrapper">
+                    <div class="device" data-device="iPhone7" data-orientation="portrait" data-color="black">
+                        <div class="screen">
+                            <!-- PUT CONTENTS HERE -->
+                            <canvas id="iphone"></canvas>
 
-                            </div>
-                            <div class="button">
-                                <!-- You can hook the "home button" to some JavaScript events or just remove it -->
-                            </div>
+                        </div>
+                        <div class="button">
+                            <!-- You can hook the "home button" to some JavaScript events or just remove it -->
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
 
@@ -70,7 +65,8 @@
                     </div>
                     <div class="col-sm-4">
                         <i class="fa fa-apple download-platform col-sm-4" aria-hidden="true"></i>
-                        <a id="macos" href="https://github.com/fttx/barcode-to-pc-server/releases/download/v1.1.0/Barcode.to.PC.server-1.1.0.dmg" class="btn btn-outline btn-xl page-scroll">Download .dmg</a>
+                        <a id="macos" href="https://github.com/fttx/barcode-to-pc-server/releases/download/v1.1.0/Barcode.to.PC.server-1.1.0.dmg"
+                            class="btn btn-outline btn-xl page-scroll">Download .dmg</a>
                     </div>
                     <div class="col-sm-4">
                         <i class="fa fa-linux download-platform col-sm-4" aria-hidden="true"></i>
@@ -92,18 +88,18 @@
         </div>
         <div class="row">
             <div class="col-md-4">
-                <div class="device-container">
-                    <div class="device-mockup iphone6_plus portrait white">
-                        <div class="device">
-                            <div class="screen">
-                                <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                                <img src="img/demo-screen-1.gif" class="img-responsive" alt=""> </div>
-                            <div class="button">
-                                <!-- You can hook the "home button" to some JavaScript events or just remove it -->
-                            </div>
-                        </div>
+
+                <div class="device-wrapper">
+                    <div class="device" data-device="iPhone7" data-orientation="portrait" data-color="white">
+                        <div class="screen">
+                            <!-- PUT CONTENTS HERE -->
+                            <img src="img/demo-screen-1.gif" class="img-responsive" alt=""> </div>
+                    </div>
+                    <div class="button">
+                        <!-- You can hook the "home button" to some JavaScript events or just remove it -->
                     </div>
                 </div>
+
             </div>
             <div class="col-md-8">
                 <div class="container-fluid">

@@ -1,21 +1,15 @@
-@media (min-width: 768px) {
-
-    .mackbook-container, .iphone-container {
-        height: 80vh;        
-    }
-
-    .iphone-container {
-        position: relative;
-        left: -177px;
-        top: 77px;
-    }
+.header-download h1 {
+    font-size: 30px;
+    margin: 0;
 }
 
+.header-download {
+    width: 70%;
+    margin: 0;        
+}
 
-@media (max-width: 768px) {
-    header .container {
-        padding-top: 150px;
-    }
+.download-button {
+    margin: 25px 0;
 }
 
 @media (max-width: 992px)  {
@@ -24,27 +18,60 @@
         margin: 50px 0;
         display: block;
     }
-}
 
-@media (max-height: 826px) and (min-width: 992px) {
-    .header-download{
-        width: 60%;
-        margin: 50px 0;        
+    .header-download {
+        width: 100%;
+        margin: 50px 0;
     }
 
-    .download-button {
-        margin: 25px 0;
+    .header-download h1 {
+        font-size: 54px;
     }
-}
 
-@media (max-height: 768px) {
-    .header-content {
-        height: auto !important;
+    header .container {
+        padding-top: 100px;
     }
 }
 
-.device-container {
-    max-height: none !important;
+@media (min-width: 1200px) and (min-height: 936px) {
+    .iphone-container {
+        position: relative;
+        left: -177px;
+        top: 77px;
+    }
+
+    .header-download {
+        margin-top: 77px;
+        width: 100%;    
+    }
+
+    .header-download h1 {
+        font-size: 54px;
+        margin-top: 25px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .iphone-container .device-wrapper{
+        width: 70%;
+        margin: 40px auto;
+    }
+    header .container {
+        padding-top: 50px;
+    }
+}
+
+.device-wrapper {
+    max-width: none !important;
+}
+
+.video-section {
+    padding-top: 100px;
+}
+
+.iphone-container {
+    height: auto;
 }
 
 .nav.navbar-nav.navbar-right li a, .navbar-brand  {
@@ -60,10 +87,6 @@ header *{
     color: white;
     background-color: @theme-primary !important;    
     border-color: @theme-primary !important;
-}
-
-.header-download {
-    font-size: 35px;
 }
 
 
