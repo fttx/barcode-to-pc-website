@@ -10,3 +10,7 @@ npm install
 gulp dev
 gulp
 ```
+
+# TODO
+- Add sitemap
+- Adda google analytics events
