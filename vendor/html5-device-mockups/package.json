@@ -1,27 +1,26 @@
 {
-  "_from": "html5-device-mockups",
-  "_id": "html5-device-mockups@3.0.3",
+  "_from": "html5-device-mockups@^3.0.3",
+  "_id": "html5-device-mockups@3.2.0",
   "_inBundle": false,
-  "_integrity": "sha512-kZJA35OJnMrB+zHtZ6dF5DckuzCXWhIyR3nLDkRNWW5D7X6jtZiU20h/QDsX8NVA+2furopJswqcOHXWbN5joQ==",
+  "_integrity": "sha512-PszysvUvmO7s2cnDG2heogoGmOyEJPg/YHWW7VkeQeiiS6ZCWKnRAzKG58t7C3B6/KLu/Rp6PTC32NK49Li/ZQ==",
   "_location": "/html5-device-mockups",
   "_phantomChildren": {},
   "_requested": {
-    "type": "tag",
+    "type": "range",
     "registry": true,
-    "raw": "html5-device-mockups",
+    "raw": "html5-device-mockups@^3.0.3",
     "name": "html5-device-mockups",
     "escapedName": "html5-device-mockups",
-    "rawSpec": "",
+    "rawSpec": "^3.0.3",
     "saveSpec": null,
-    "fetchSpec": "latest"
+    "fetchSpec": "^3.0.3"
   },
   "_requiredBy": [
-    "#DEV:/",
-    "#USER"
+    "#DEV:/"
   ],
-  "_resolved": "https://registry.npmjs.org/html5-device-mockups/-/html5-device-mockups-3.0.3.tgz",
-  "_shasum": "aab7ccf3ee74f67e31f72766bb0c9bdcbe373e06",
-  "_spec": "html5-device-mockups",
+  "_resolved": "https://registry.npmjs.org/html5-device-mockups/-/html5-device-mockups-3.2.0.tgz",
+  "_shasum": "b5062645c962c4c9f73582e37a354af17b846068",
+  "_spec": "html5-device-mockups@^3.0.3",
   "_where": "/Users/filippo/Desktop/PROJECTS/barcode-to-pc-website",
   "author": "",
   "bundleDependencies": false,
@@ -31,8 +30,7 @@
     "grunt": "^1.0.1",
     "grunt-banner": "^0.6.0",
     "grunt-contrib-cssmin": "^2.1.0",
-    "grunt-contrib-less": "^1.4.1",
-    "less-plugin-autoprefix": "^1.5.1"
+    "grunt-sass": "^2.0.0"
   },
   "license": "ISC",
   "link": "https://github.com/pixelsign/html5-device-mockups",
@@ -41,5 +39,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "3.0.3"
+  "version": "3.2.0"
 }
