@@ -4,11 +4,7 @@ $(function () {
     if (ga) {
         $('#download-server a, #download-app a').click(function () {
             switch ($(this).attr('id')) {
-                case 'win-32':
-                    ga('send', 'event', 'Downloads', 'download', 'Windows x32', 'win32');
-                    ga('send', 'event', 'Apple', 'Download Bonjour', 'bonjour', 'bonjour');
-                    break;
-                case 'win-64':
+                case 'win':
                     ga('send', 'event', 'Downloads', 'download', 'Windows x64', 'win64');
                     ga('send', 'event', 'Apple', 'Download Bonjour', 'bonjour', 'bonjour');
                     break;
@@ -30,13 +26,6 @@ $(function () {
             }
         });
     }
-
-    $('#win').click(function (e) {
-        e.preventDefault();
-        $('#win-32, #win-64').removeClass('hidden');
-        $(this).addClass('hidden');
-    });
-
 
     $('a[href^="#"]').click(function (event) {
         event.preventDefault();

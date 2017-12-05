@@ -170,6 +170,18 @@ footer .list-inline {
   max-width: 70%;
   height: auto;
 }
+.other-versions,
+.other-versions:link,
+.other-versions:visited,
+.other-versions:active {
+  display: block;
+  color: white;
+  text-decoration: underline;
+  margin: 100px 0 -80px 0;
+}
+.other-versions:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
 .heading-font {
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
