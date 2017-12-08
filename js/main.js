@@ -1,31 +1,45 @@
 $(function () {
     setupVideo();
 
-    if (ga) {
-        $('#download-server a, #download-app a').click(function () {
-            switch ($(this).attr('id')) {
-                case 'win':
-                    ga('send', 'event', 'Downloads', 'download', 'Windows x64', 'win64');
-                    ga('send', 'event', 'Apple', 'Download Bonjour', 'bonjour', 'bonjour');
-                    break;
+    $('#download-server a, #download-app a').click(function () {
+        switch ($(this).attr('id')) {
+            case 'win':
+                gtag('event', 'download_server', {
+                    'platform': 'win',
+                });
+                gtag('event', 'bonjour_distribution');
+                break;
 
-                case 'macos':
-                    ga('send', 'event', 'Downloads', 'download', 'macOS', 'macos');
-                    break;
+            case 'macos':
+                gtag('event', 'download_server', {
+                    'platform': 'macos',
+                });
+                break;
 
-                case 'linux':
-                    ga('send', 'event', 'Downloads', 'download', 'Linux', 'linux');
-                    break;
+            case 'linux':
+                gtag('event', 'download_server', {
+                    'platform': 'linux',
+                });
+                break;
 
-                case 'ios':
-                    ga('send', 'event', 'Downloads', 'download', 'iOS', 'ios');
-                    break;
-                case 'android':
-                    ga('send', 'event', 'Downloads', 'download', 'Android', 'android');
-                    break;
-            }
+            case 'ios':
+                gtag('event', 'download_app', {
+                    'platform': 'ios',
+                });
+                break;
+            case 'android':
+                gtag('event', 'download_app', {
+                    'platform': 'android',
+                });
+                break;
+        }
+    });
+
+    $('#github_app, #github_server').click(function (e) {
+        gtag('event', 'view_source', {
+            'product': $(this).attr('id').replace('github_', ''),
         });
-    }
+    });
 
     $('a[href^="#"]').click(function (event) {
         event.preventDefault();
