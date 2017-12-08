@@ -54,6 +54,30 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+    <script>
+    window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#ffffff",
+          "text": "#878787"
+        },
+        "button": {
+          "background": "#b71c1c",
+          "text": "#ffffff"
+        }
+      },
+      "theme": "classic",
+      "position": "bottom-right",
+      "content": {
+        "message": "We share data about your use of our site with our partners for traffic analysis and advertising purposes.\nBy continuing to browse our site you agree to our use of cookies and",
+        "link": "Privacy Policy",
+        "href": "/privacy.html"
+      }
+    })});
+    </script>
 </head>
 
 <body id="page-top">

@@ -182,6 +182,9 @@ footer .list-inline {
 .other-versions:hover {
   color: rgba(255, 255, 255, 0.6);
 }
+.cc-window {
+  border: 1px solid #dadada;
+}
 .heading-font {
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
