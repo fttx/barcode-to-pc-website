@@ -1,6 +1,6 @@
 /*!
  * Start Bootstrap - New Age v3.3.7 (http://startbootstrap.com/template-overviews/new-age)
- * Copyright 2013-2017 Start Bootstrap
+ * Copyright 2013-2018 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 /*@theme-primary:    #f44336;
@@ -140,11 +140,24 @@ section.download h2 {
 }
 section.section-title {
   padding-bottom: 20px;
-  padding-top: 80px;
+  padding-top: 90px;
+}
+section.section-title h1 {
+  margin: 5px 0;
+}
+section.section-title p {
+  margin: 5px 0px;
+}
+section.section-title p.author {
+  font-size: 0.9em;
 }
 section.section-container {
   padding-bottom: 60px;
   padding-top: 0px;
+}
+section.section-container h3 {
+  font-size: 20px;
+  font-weight: 500;
 }
 section.section-container h2 {
   font-size: 25px;
@@ -152,18 +165,19 @@ section.section-container h2 {
 }
 section.section-container p {
   font-size: 15px;
+  margin-left: 40px !important;
 }
-footer {
+footer.page-footer {
   color: rgba(255, 255, 255, 0.6) !important;
 }
-footer a {
+footer.page-footer a {
   color: rgba(255, 255, 255, 0.6) !important;
   font-size: 14px !important;
 }
-footer a:hover {
+footer.page-footer a:hover {
   color: #fff !important;
 }
-footer .list-inline {
+footer.page-footer .list-inline {
   padding-top: 12px;
 }
 .screenshoot {
@@ -551,27 +565,27 @@ section.contact ul.list-social li.social-google-plus a {
 section.contact ul.list-social li.social-google-plus a:hover {
   background-color: #d73925;
 }
-footer {
+footer.page-footer {
   background-color: #222222;
   padding: 25px 0;
   color: rgba(255, 255, 255, 0.3);
   text-align: center;
 }
-footer p {
+footer.page-footer p {
   font-size: 12px;
   margin: 0;
 }
-footer ul {
+footer.page-footer ul {
   margin-bottom: 0;
 }
-footer ul li a {
+footer.page-footer ul li a {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.3);
 }
-footer ul li a:hover,
-footer ul li a:focus,
-footer ul li a:active,
-footer ul li a.active {
+footer.page-footer ul li a:hover,
+footer.page-footer ul li a:focus,
+footer.page-footer ul li a:active,
+footer.page-footer ul li a.active {
   text-decoration: none;
 }
 .bg-primary {
