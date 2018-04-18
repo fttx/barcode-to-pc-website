@@ -29,9 +29,13 @@
     </script>
     <!-- End Global site tag (gtag.js) - Google Analytics -->
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-        crossorigin="anonymous">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap  -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <!-- Custom Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
@@ -54,7 +58,9 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+
+    <!-- COOKIE LAW POP-UP START -->
+    <!-- <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
     <script>
     window.addEventListener("load", function(){
@@ -77,7 +83,8 @@
         "href": "/privacy.html"
       }
     })});
-    </script>
+    </script> -->
+    <!-- COOKIE LAW POP-UP END -->    
 </head>
 
 <body id="page-top">
@@ -313,7 +320,7 @@
         <p>Copyright &copy; 2018 Barcode to PC. Filippo Tortomasi. All rights reserved.</p>
         <ul class="list-inline">
             <li>
-                <a href="privacy.html">Privacy</a>
+                <a href="privacy.html">Privacy Policy</a>
             </li>
             <li>
                 <a href="faq.html">FAQ</a>
@@ -325,17 +332,62 @@
     </div>
 </footer>
 
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#ads">
+    Launch demo modal
+</button> -->
+
+<!-- After Download server = ads -->
+<div class="modal fade subscribe" id="ads-modal" tabindex="-1" role="dialog" aria-labelledby="adsLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <!-- <h4 class="modal-title" id="adsLabel">Modal title</h4> -->
+            </div>
+            <form id="ads-form">
+                <div class="modal-body">
+                    <div class="message">
+                        Hi there!
+                        <br>
+                        <br>
+                        <b>Barcode to PC Pro</b> is about to be released, it'll include advanced features like: append the quantity
+                        to the scan, continuous-mode scanning, save scans to files in real-time and much more.
+                        <br>
+                        <br>
+                        <p class="text-uppercase highlight">Subscribe now to get a <b>20&#37; off the license</b> when it'll be available</p>
+                        <br>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="firstName">Your name</label>
+                        <input type="text" class="form-control" id="ads-name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailAddress">E-mail address</label>
+                        <input type="email" class="form-control" id="ads-email" placeholder="E-mail address" required>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+                    <button class="btn btn-primary btn-lg btn-block">Subscribe</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 <!-- jQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-<!-- Theme JavaScript -->
-<script src="js/new-age.min.js"></script>
-
 <!-- Main JavaScript -->
-<script src="js/main.min.js"></script>
+<script src="dist/build.js"></script>
 </body>
 
 </html>

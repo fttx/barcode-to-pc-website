@@ -1,7 +1,7 @@
 /*!
  * Start Bootstrap - New Age v3.3.7 (http://startbootstrap.com/template-overviews/new-age)
  * Copyright 2013-2018 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ * Licensed under  ()
  */
 /*@theme-primary:    #f44336;
 @theme-secondary:  #B71C1C;
@@ -173,9 +173,11 @@ footer.page-footer {
 footer.page-footer a {
   color: rgba(255, 255, 255, 0.6) !important;
   font-size: 14px !important;
+  text-decoration: underline;
 }
 footer.page-footer a:hover {
   color: #fff !important;
+  text-decoration: underline !important;
 }
 footer.page-footer .list-inline {
   padding-top: 12px;
@@ -198,6 +200,21 @@ footer.page-footer .list-inline {
 }
 .cc-window {
   border: 1px solid #dadada;
+}
+.modal.subscribe .message {
+  font-size: 22px;
+}
+.modal.subscribe .highlight {
+  font-size: 1.05em;
+  font-weight: bolder;
+}
+.modal.subscribe b {
+  color: #B71C1C !important;
+  font-weight: bolder;
+}
+.form-control:focus {
+  border-color: #e55454 !important;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px #f9d9d9 !important;
 }
 .heading-font {
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';

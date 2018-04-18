@@ -204,11 +204,13 @@ footer.page-footer {
 
     a {
         color: rgba(255,255,255,.6) !important;    
-        font-size: 14px !important;        
+        font-size: 14px !important;
+        text-decoration: underline;             
     }
 
     a:hover {
         color: #fff !important;    
+        text-decoration: underline !important;             
     }
 
     .list-inline {
@@ -234,4 +236,25 @@ footer.page-footer {
 
 .cc-window {
     border: 1px solid #dadada;
+}
+
+.modal.subscribe .message {
+    font-size: 22px;
+}
+
+.modal.subscribe .highlight {
+    font-size: 1.05em;
+    font-weight: bolder;
+}
+
+
+.modal.subscribe b {
+    color: @theme-primary !important;
+    font-weight: bolder;
+}
+
+
+.form-control:focus {
+    border-color: lighten(@theme-primary, 20%) !important;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px lighten(@theme-primary, 50%) !important;
 }

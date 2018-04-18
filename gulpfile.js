@@ -4,6 +4,8 @@ var browserSync = require('browser-sync').create();
 var header = require('gulp-header');
 var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
+var concat = require("gulp-concat");
+var sourcemaps = require("gulp-sourcemaps");
 var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
 var fileinclude = require('gulp-file-include');
@@ -41,11 +43,16 @@ gulp.task('minify-css', ['less'], function () {
 
 // Minify JS
 gulp.task('minify-js', function () {
-    return gulp.src(['js/new-age.js', 'js/main.js'])
+    return gulp.src(['js/new-age.js', 'js/config.js', 'js/utils.js', 'js/main.js', 'js/modals.js'])
+        .pipe(sourcemaps.init())
+        .pipe(concat('build.js'))
+        .pipe(gulp.dest('dist'))
+        .pipe(rename('build.js'))
         .pipe(uglify())
+        .pipe(sourcemaps.write('./'))
         .pipe(header(banner, { pkg: pkg }))
-        .pipe(rename({ suffix: '.min' }))
-        .pipe(gulp.dest('js'))
+        // .pipe(rename({ suffix: '.min' }))
+        .pipe(gulp.dest('dist'))
         .pipe(browserSync.reload({
             stream: true
         }))

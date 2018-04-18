@@ -4,18 +4,21 @@
   "version": "3.3.7",
   "homepage": "http://startbootstrap.com/template-overviews/new-age",
   "author": "Start Bootstrap",
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE"
+  "license": "MIT",
+  "scripts": {
+    "start": "gulp dev",
+    "dist": "gulp"
   },
   "devDependencies": {
     "browser-sync": "^2.13.0",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^2.0.10",
+    "gulp-concat": "^2.6.1",
     "gulp-file-include": "^1.2.0",
     "gulp-header": "^1.8.7",
     "gulp-less": "^3.1.0",
     "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^1.5.4",
     "html5-device-mockups": "^3.0.3"
   },
