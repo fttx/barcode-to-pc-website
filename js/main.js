@@ -5,31 +5,37 @@ $(function () {
         switch ($(this).attr('id')) {
             case 'win':
                 gtag('event', 'download_server', {
-                    'platform': 'win',
+                    'event_category': 'download',
+                    'event_label': 'win',
                 });
+
                 gtag('event', 'bonjour_distribution');
                 break;
 
             case 'macos':
                 gtag('event', 'download_server', {
-                    'platform': 'macos',
+                    'event_category': 'download',
+                    'event_label': 'macos',
                 });
                 break;
 
             case 'linux':
                 gtag('event', 'download_server', {
-                    'platform': 'linux',
+                    'event_category': 'download',
+                    'event_label': 'linux',
                 });
                 break;
 
             case 'ios':
                 gtag('event', 'download_app', {
-                    'platform': 'ios',
+                    'event_category': 'download',
+                    'event_label': 'ios',
                 });
                 break;
             case 'android':
                 gtag('event', 'download_app', {
-                    'platform': 'android',
+                    'event_category': 'download',
+                    'event_label': 'android',
                 });
                 break;
         }
@@ -37,7 +43,8 @@ $(function () {
 
     $('#github_app, #github_server').click(function (e) {
         gtag('event', 'view_source', {
-            'product': $(this).attr('id').replace('github_', ''),
+            'event_category': 'view',
+            'event_label': $(this).attr('id').replace('github_', ''),
         });
     });
 

@@ -42,11 +42,16 @@ $(function () {
             if (data == 'OK') {
                 setCookie(COOKIE_USER_ACQUIRED, true)
                 $('#ads-modal').modal('hide');
+
+                gtag('event', 'ads_modal', {
+                    'event_category': 'marketing',
+                    'event_label': 'user_acquired',
+                });
             } else {
                 alert('An error occurred, please try later')
             }
-        }).fail(function() {
-            alert('An error occurred, please try later')            
+        }).fail(function () {
+            alert('An error occurred, please try later')
         });
         return false;
     });
@@ -68,6 +73,10 @@ $(function () {
             $('#ads-modal').modal('show');
             var viewsCountBeforeAcquisition = parseInt(getCookie(COOKIE_VIEWS_COUNT_BEFORE_ACQUSITION) || 0);
             setCookie(COOKIE_VIEWS_COUNT_BEFORE_ACQUSITION, viewsCountBeforeAcquisition + 1)
+            gtag('event', 'ads_modal', {
+                'event_category': 'marketing',
+                'event_label': 'show_modal',
+            });
         }, 1000 * afterSeconds)
     }
 })
