@@ -43,7 +43,7 @@ gulp.task('minify-css', ['less'], function () {
 
 // Minify JS
 gulp.task('minify-js', function () {
-    return gulp.src(['js/new-age.js', 'js/config.js', 'js/utils.js', 'js/main.js', 'js/modals.js'])
+    return gulp.src(['js/new-age.js', 'js/config.js', 'js/utils.js', 'js/main.js', 'js/marketing.js'])
         .pipe(sourcemaps.init())
         .pipe(concat('build.js'))
         .pipe(gulp.dest('dist'))
