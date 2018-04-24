@@ -200,6 +200,8 @@ section.section-container {
 
 footer.page-footer {
     color: rgba(255,255,255,.6) !important;
+    height: 300px;
+    padding-top: 100px !important;
 
     a {
         color: rgba(255,255,255,.6) !important;    
@@ -213,7 +215,7 @@ footer.page-footer {
     }
 
     .list-inline {
-        padding: 36px 0;
+        padding: 45px 0;
     }
 }
 
@@ -262,4 +264,15 @@ footer.page-footer {
     .nav.navbar-nav.navbar-right li a, .navbar-brand {
         padding: 0 5px !important;
     }
+}
+
+.page-scroll {
+    background-size: 0 100%;
+}
+
+.page-scroll.selected {
+    background-image: url(/img/menu-underline.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: calc(~"100% - 30px") 100%;
 }

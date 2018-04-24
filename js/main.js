@@ -58,6 +58,23 @@ $(function () {
             $(window).scrollTop($(location.hash).offset().top - 76);
         }, 0)
     }
+
+    $(window).scroll(function () {
+        var currentPosition = $(window).scrollTop() + 76;
+
+        $('body > section').each(function (index) {
+            var sectionPosition = $(this).offset().top,
+                sectionHeight = $(this).outerHeight();
+            // console.log(currentPosition >= sectionPosition, currentPosition, sectionHeight, $(this).attr('id'))
+            if (currentPosition >= sectionPosition && currentPosition < sectionPosition + sectionHeight) {
+                $('.nav a').removeClass('selected')
+                $('.nav a').eq(index).addClass('selected')
+                return false;
+            } else {
+                $('.nav a').eq(index).removeClass('selected')
+            }
+        });
+    }).trigger('scroll');
 })
 
 

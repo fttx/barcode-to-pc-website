@@ -168,6 +168,8 @@ section.section-container p {
 }
 footer.page-footer {
   color: rgba(255, 255, 255, 0.6) !important;
+  height: 300px;
+  padding-top: 100px !important;
 }
 footer.page-footer a {
   color: rgba(255, 255, 255, 0.6) !important;
@@ -179,7 +181,7 @@ footer.page-footer a:hover {
   text-decoration: underline !important;
 }
 footer.page-footer .list-inline {
-  padding: 36px 0;
+  padding: 45px 0;
 }
 .screenshoot {
   max-width: 70%;
@@ -220,6 +222,15 @@ footer.page-footer .list-inline {
   .navbar-brand {
     padding: 0 5px !important;
   }
+}
+.page-scroll {
+  background-size: 0 100%;
+}
+.page-scroll.selected {
+  background-image: url(/img/menu-underline.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: calc(100% - 30px) 100%;
 }
 .heading-font {
   font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
