@@ -171,15 +171,15 @@ footer.page-footer {
 }
 footer.page-footer a {
   color: rgba(255, 255, 255, 0.6) !important;
-  font-size: 14px !important;
-  text-decoration: underline;
+  font-size: 15px !important;
+  text-decoration: none;
 }
 footer.page-footer a:hover {
   color: #fff !important;
   text-decoration: underline !important;
 }
 footer.page-footer .list-inline {
-  padding-top: 12px;
+  padding: 36px 0;
 }
 .screenshoot {
   max-width: 70%;
@@ -218,7 +218,7 @@ footer.page-footer .list-inline {
 @media (max-width: 991px) {
   .nav.navbar-nav.navbar-right li a,
   .navbar-brand {
-    padding: 0 9px !important;
+    padding: 0 5px !important;
   }
 }
 .heading-font {
