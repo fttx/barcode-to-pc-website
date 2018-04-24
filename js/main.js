@@ -60,9 +60,9 @@ $(function () {
     }
 
     $(window).scroll(function () {
-        var currentPosition = $(window).scrollTop() + 76;
+        var currentPosition = $(window).scrollTop() + 78;
 
-        $('body > section').each(function (index) {
+        $('.menu-section').each(function (index) {
             var sectionPosition = $(this).offset().top,
                 sectionHeight = $(this).outerHeight();
             // console.log(currentPosition >= sectionPosition, currentPosition, sectionHeight, $(this).attr('id'))
