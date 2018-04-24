@@ -183,6 +183,9 @@ footer.page-footer a:hover {
 footer.page-footer .list-inline {
   padding: 45px 0;
 }
+footer.page-footer .list-inline li {
+  padding: 0 19px;
+}
 .screenshoot {
   max-width: 70%;
   height: auto;
