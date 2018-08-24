@@ -11,8 +11,8 @@ npm install gulp -D
 
 ```bash
 npm install
-gulp dev
-gulp
+npm run dist
+npm run start # dev mode
 ```
 
 ## TODO
