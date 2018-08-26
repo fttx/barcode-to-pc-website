@@ -601,6 +601,29 @@ section.contact ul.list-social li.social-google-plus a {
 section.contact ul.list-social li.social-google-plus a:hover {
   background-color: #d73925;
 }
+.section-container {
+  padding-bottom: 60px;
+  padding-top: 0px;
+}
+.section-container h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.section-container h2 {
+  font-size: 25px;
+  font-weight: 500;
+}
+.section-container h1 {
+  font-size: 28px;
+  font-weight: 500;
+}
+.section-container p {
+  font-size: 15px;
+}
+h1.entry-title {
+  margin-top: 20px !important;
+  margin-bottom: 0 !important;
+}
 footer.page-footer {
   background-color: #222222;
   padding: 25px 0;

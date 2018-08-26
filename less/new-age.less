@@ -1,6 +1,5 @@
 @import "variables.less";
 @import "mixins.less";
-
 // Global Components
 html,
 body {
@@ -48,7 +47,6 @@ p {
 }
 
 // Navigation
-
 .navbar-default {
     background-color: white;
     border-color: fade(@gray-darker, 5%);
@@ -68,22 +66,22 @@ p {
         padding: 8px 10px;
     }
     .nav {
-        > li {
-            > a {
+        >li {
+            >a {
                 .alt-font;
                 font-size: 11px;
             }
-            > a,
-            > a:focus {
+            >a,
+            >a:focus {
                 color: @gray-darker;
                 &:hover {
                     color: @theme-primary;
                 }
             }
             &.active {
-                > a,
-                > a:focus {
-                    color: @theme-primary !important;
+                >a,
+                >a:focus {
+                    color: @theme-primary  !important;
                     background-color: transparent;
                     &:hover {
                         background-color: transparent;
@@ -102,8 +100,8 @@ p {
                 color: white;
             }
         }
-        .nav > li > a,
-        .nav > li > a:focus {
+        .nav>li>a,
+        .nav>li>a:focus {
             color: fade(white, 70%);
             &:hover {
                 color: white;
@@ -119,8 +117,8 @@ p {
                     color: @theme-primary;
                 }
             }
-            .nav > li > a,
-            .nav > li > a:focus {
+            .nav>li>a,
+            .nav>li>a:focus {
                 color: @gray-darker;
                 &:hover {
                     color: @theme-primary;
@@ -131,15 +129,17 @@ p {
 }
 
 // Homepage Header
-
 header {
     position: relative;
     width: 100%;
     min-height: auto;
     overflow-y: hidden;
-    background: url("../img/bg-pattern.png"), @theme-secondary; /* fallback for old browsers */
-    background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, @theme-secondary , @theme-tertiary); /* Chrome 10-25, Safari 5.1-6 */
-    background: url("../img/bg-pattern.png"), linear-gradient(to left, @theme-secondary , @theme-tertiary); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: url("../img/bg-pattern.png"), @theme-secondary;
+    /* fallback for old browsers */
+    background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, @theme-secondary , @theme-tertiary);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: url("../img/bg-pattern.png"), linear-gradient(to left, @theme-secondary , @theme-tertiary);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: white;
     .header-content {
         text-align: center;
@@ -201,7 +201,6 @@ header {
 }
 
 // Sections
-
 section {
     padding: 100px 0;
     h2 {
@@ -268,10 +267,10 @@ section.features {
         }
         i {
             font-size: 80px;
-              background: -webkit-linear-gradient(to left, @theme-secondary , @theme-tertiary);
-              background: linear-gradient(to left, @theme-secondary , @theme-tertiary);
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
+            background: -webkit-linear-gradient(to left, @theme-secondary , @theme-tertiary);
+            background: linear-gradient(to left, @theme-secondary , @theme-tertiary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     }
     @media(min-width: 992px) {
@@ -363,6 +362,35 @@ section.contact {
     }
 }
 
+.section-container {
+    padding-bottom: 60px;
+    padding-top: 0px;
+}
+
+.section-container h3 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.section-container h2 {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.section-container h1 {
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.section-container p {
+    font-size: 15px;
+}
+
+h1.entry-title {
+    margin-top: 20px !important;
+    margin-bottom: 0 !important;
+}
+
 footer.page-footer {
     background-color: @gray-darker;
     padding: 25px 0;
@@ -390,7 +418,6 @@ footer.page-footer {
 }
 
 // Bootstrap Overrides
-
 .bg-primary {
     background: @theme-primary;
     background: -webkit-linear-gradient(@theme-primary , darken(@theme-primary, 5%));
@@ -401,9 +428,9 @@ footer.page-footer {
     color: @theme-primary;
 }
 
-.no-gutter > [class*='col-'] {
-    padding-right:0;
-    padding-left:0;
+.no-gutter>[class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
 }
 
 // Button Styles
