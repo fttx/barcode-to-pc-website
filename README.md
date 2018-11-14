@@ -17,6 +17,5 @@ npm run start # dev mode
 
 ## TODO
 
-- Add a blog
 - Add opensource licenses list
-- Add a pricing page
+- Change popup message
