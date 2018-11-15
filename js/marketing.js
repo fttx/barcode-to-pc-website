@@ -57,6 +57,7 @@ $(function () {
         }, 1000 * afterSeconds)
     }
 
+
     ////////// COMMENTS //////////
     if (getCookie(COOKIE_USER_ACQUIRED)) {
         $('.comment-form-email-consent-container').hide();
@@ -76,6 +77,7 @@ $(function () {
         })
     });
 
+
     ////////// IS-HELPFUL //////////
     $('.is-helpful-yes').click(function () {
         $('.is-helpful-question').hide();
@@ -94,6 +96,18 @@ $(function () {
                 'event_label': 'user_acquired',
             });
             $('.is-helpful-subscribe-form').html('Thank you!');
+        })
+    })
+
+
+    ////////// NEWSLETTER //////////
+    $('.newsletter-button').click(function () {
+        subscribe($('.newsletter-name').val(), $('.newsletter-email').val(), 4, function () {
+            gtag('event', 'newsletter', {
+                'event_category': 'marketing',
+                'event_label': 'user_acquired',
+            });
+            $('.newsletter-form').html('Thank you!');
         })
     })
 
