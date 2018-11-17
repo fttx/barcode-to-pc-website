@@ -19,3 +19,4 @@ npm run start # dev mode
 
 - Add opensource licenses list
 - Change popup message
+- generate sitemap
