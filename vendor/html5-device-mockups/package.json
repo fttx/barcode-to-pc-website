@@ -1,8 +1,8 @@
 {
   "_from": "html5-device-mockups@^3.0.3",
-  "_id": "html5-device-mockups@3.2.0",
+  "_id": "html5-device-mockups@3.2.1",
   "_inBundle": false,
-  "_integrity": "sha512-PszysvUvmO7s2cnDG2heogoGmOyEJPg/YHWW7VkeQeiiS6ZCWKnRAzKG58t7C3B6/KLu/Rp6PTC32NK49Li/ZQ==",
+  "_integrity": "sha512-jxuLuDf9iABIoFlclVGmhjC3sH91JquIOz6ByKsROg/0ztqamac3XYlnA3GZHfQNM6XZRIsNX8OWal+2R/CTEQ==",
   "_location": "/html5-device-mockups",
   "_phantomChildren": {},
   "_requested": {
@@ -18,8 +18,8 @@
   "_requiredBy": [
     "#DEV:/"
   ],
-  "_resolved": "https://registry.npmjs.org/html5-device-mockups/-/html5-device-mockups-3.2.0.tgz",
-  "_shasum": "b5062645c962c4c9f73582e37a354af17b846068",
+  "_resolved": "https://registry.npmjs.org/html5-device-mockups/-/html5-device-mockups-3.2.1.tgz",
+  "_shasum": "97e39de69e9fa86760116653d8daf5fe43be77d5",
   "_spec": "html5-device-mockups@^3.0.3",
   "_where": "/Users/filippo/Desktop/PROJECTS/barcode-to-pc-website",
   "author": "",
@@ -32,12 +32,12 @@
     "grunt-contrib-cssmin": "^2.1.0",
     "grunt-sass": "^2.0.0"
   },
-  "license": "ISC",
+  "license": "MIT",
   "link": "https://github.com/pixelsign/html5-device-mockups",
   "main": "dist/device-mockups.min.css",
   "name": "html5-device-mockups",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "3.2.0"
+  "version": "3.2.1"
 }
