@@ -331,7 +331,6 @@ p {
 }
 .navbar-default .nav > li.active > a,
 .navbar-default .nav > li.active > a:focus {
-  color: #B71C1C !important;
   background-color: transparent;
 }
 .navbar-default .nav > li.active > a:hover,
