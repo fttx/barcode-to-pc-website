@@ -27,16 +27,18 @@ $(function () {
         var firstName = name[0];
         var lastName = name.splice(1, name.length - 1).join(' ');
         var email = $('#ads-email').val()
+        var companyName = $('#ads-company-name').val()
         var viewsCountBeforeAcquisition = parseInt(getCookie(COOKIE_VIEWS_COUNT_BEFORE_ACQUSITION) || 0);
 
         $.post(CONFIG_MARKETING_SERVER_URL + '/addUser', {
             firstName: firstName,
             lastName: lastName,
             email: email,
+            companyName: companyName,
             ip: ip,
             country: country,
             utcOffset: new Date().getTimezoneOffset(),
-            campaignId: 1,
+            campaignId: 2,
             viewsCountBeforeAcquisition: viewsCountBeforeAcquisition,
         }, function (data) {
             if (data == 'OK') {
