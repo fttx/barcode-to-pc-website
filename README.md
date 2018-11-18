@@ -20,3 +20,8 @@ npm run start # dev mode
 - Add opensource licenses list
 - Change popup message
 - generate sitemap
+
+## Nginx
+```bash
+sudo cp -f barcodetopc.com.conf /etc/nginx/sites-available/
+```
